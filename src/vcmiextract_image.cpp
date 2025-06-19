@@ -293,7 +293,7 @@ static void extract_def_h3(memory_file & file, const std::filesystem::path & des
 			file_listing += std::filesystem::path(entry.name.data()).replace_extension(".png").string();
 			file_listing += "\" },\n";
 
-			vcmiextract::save_image(image, destination, entry.name.data());
+			vcmiextract::save_image(image, destination, i.string()+".png"); //entry.name.data());
 		}
 	}
 
